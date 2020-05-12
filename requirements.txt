@@ -1,0 +1,15 @@
+Flask
+Flask-Session
+psycopg2-binary
+SQLAlchemy
+passlib
+WTForms
+mysqlclient
+pytest
+werkzeug<1
+pytest-postgresql
+
+
+
+
+

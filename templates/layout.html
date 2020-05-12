@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LibraryLender!</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        
+    </head>
+    <body>
+        <h3><marquee>{% block heading %}{% endblock %}</marquee></h3>
+
+        {% block body %}
+        <button type="button"></button>
+        {% endblock %}
+    </body>
+</html>
