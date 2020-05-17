@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>LibraryLender!</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-        
-    </head>
-    <body>
-        <h3><marquee>{% block heading %}{% endblock %}</marquee></h3>
-
-        {% block body %}
-        <button type="button"></button>
-        {% endblock %}
-    </body>
+<head>
+    <title>LibraryLender!</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <ul class="flashes">
+        <li style="list-style: none">{% for message in messages %}</li>
+        <li>{{ message }}</li>
+        <li style="list-style: none">{% endfor %}</li>
+    </ul>{% endif %} {% endwith %}
+    <h3><marquee>{% block heading %}{% endblock %}</marquee></h3>{% block body %} <button type="button"></button> {% endblock %}
+</body>
 </html>

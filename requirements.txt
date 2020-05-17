@@ -8,6 +8,8 @@ mysqlclient
 pytest
 werkzeug<1
 pytest-postgresql
+helper
+
 
 
 
